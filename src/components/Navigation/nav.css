@@ -1,0 +1,157 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 9rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-title-svg {
+  width: 90px;
+}
+
+.li-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.3rem;
+  margin: 0;
+}
+
+.li-items li {
+  text-decoration: none;
+  list-style: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: #362e29;
+}
+
+li a {
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+.li-items .last-li,
+.last-li-side {
+  text-transform: uppercase;
+  color: #23b21f;
+  font-weight: bold;
+  padding: 0.4rem 2.7rem;
+  border: 3px solid #23b21f;
+  border-radius: 50px;
+  margin-left: 30px;
+}
+
+.sidebar-li-items {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  margin: 0;
+  padding-top: 10px;
+  padding-left: 0;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.507);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar-li-items.open {
+  display: flex;
+}
+
+.open-menu-btn {
+  display: none;
+}
+
+.close-menu-btn {
+  position: absolute;
+  top: 23px;
+  right: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar-svg {
+  width: 80px;
+}
+
+/* Why this code doens't work */
+.sidebar-li-items li:first-child:hover {
+  background-color: transparent;
+  cursor: pointer;
+  width: auto;
+}
+
+.sidebar-li-items li {
+  width: 100%;
+  padding: 15px 30px;
+  list-style: none;
+}
+
+.sidebar-li-items .last-li-side {
+  width: 75%;
+  margin: 20px auto 0 auto;
+  justify-content: center;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.sidebar-li-items li:hover {
+  background-color: #f0f0f0;
+}
+
+.last-li:hover,
+.sidebar-li-items .last-li-side:hover {
+  background-color: #23b21f;
+  color: white;
+}
+
+/* Adjustments for different screens */
+
+@media (max-width: 1023px) {
+  .header {
+    padding: 1.1rem 2rem;
+  }
+
+  .open-menu-btn {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 426px) {
+  .sidebar-li-items {
+    width: 100%;
+  }
+
+  .close-menu-btn {
+    position: absolute;
+    top: 30;
+    right: 20;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .sidebar-li-items .last-li-side {
+    width: 50%;
+    margin: 20px auto 0 auto;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 10px;
+  }
+}
