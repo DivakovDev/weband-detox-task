@@ -75,8 +75,7 @@
 
 @media (max-width: 1200px) {
   .about-section {
-    padding-top: 40px;
-    padding-bottom: 0;
+    padding: 0;
   }
 
   .image-section {
@@ -87,21 +86,29 @@
     width: 100%;
     padding: 0 40px 0 40px;
   }
+
+  .content {
+    height: 30%;
+  }
+}
+
+@media (max-width: 575px) {
+  .content-section {
+    padding-bottom: 60px;
+  }
 }
 
 @media (max-width: 460px) {
-  .tab {
-    padding-top: 20px;
-    margin-bottom: 20px;
-  }
-
   .content-section {
-    width: 100%;
-    padding: 0 10px 0 10px;
+    height: 100%;
+    padding: 40px 10px 80px 10px;
+    align-items: center;
   }
-}
 
-@media (max-width: 425px) {
+  .content {
+    height: 20%;
+  }
+
   .content-title img {
     display: none;
   }
@@ -111,10 +118,8 @@
   }
 
   .tab {
+    padding-top: 20px;
+    margin-bottom: 20px;
     white-space: nowrap;
-  }
-
-  .content-section {
-    padding: 0 15px;
   }
 }

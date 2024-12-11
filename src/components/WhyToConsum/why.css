@@ -1,5 +1,5 @@
 .why-section {
-  padding: 60px 100px 60px;
+  padding: 0 100px 60px;
 }
 
 .why-title {
@@ -17,12 +17,12 @@
 }
 
 .card-container {
-  padding-top: 80px;
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  display: flex;
   justify-content: center; 
   align-items: center;
+  padding-top: 80px;
+  gap: 16px;
 }
 
 .card {
@@ -36,7 +36,7 @@
   font-size: 16px;
   border: 2px solid #f2f2f2;
   border-radius: 10px;
-  padding: 40px 20px;
+  padding:0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease;
@@ -52,11 +52,14 @@
 
 .card img {
   margin-bottom: 10px;
+  width: 70px;
+  height: 70px;
 }
 
 .card-desc {
   font-size: 16px;
   color: #333;
+  padding: 0 10px;
 }
 
 .card-desc span {
@@ -66,38 +69,50 @@
 /* Media Queries */
 @media (max-width: 1300px) {
   .why-section {
-  padding: 0 80px 40px;
-
+      padding: 0 80px 40px;
   }
 
-  .card-container {
-    grid-template-columns: repeat(2, 1fr);
+  .card-container { 
+      display: grid;
+      column-gap: 20px;
+      grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+      
+      justify-content: space-between; /* Center the grid items horizontally */
+      align-content: center; /* Center the grid items vertically */
   }
 
   .card {
-    width: 90%;
-  }
-}
-
-@media (max-width: 1024px) {
-  card {
-    width: 100%;
+      width: 100%;
   }
 }
 
 @media (max-width: 768px) {
   .card-container {
-    grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      align-content: center;
+      padding-top: 30px;
+  }
+
+  .card {
+      width: 100%;
+      min-width: 260px;
   }
 }
 
 @media (max-width: 425px) {
-  .why-section{
-    padding-top: 60px;
+  .why-section {
+      margin-top: 60px;
   }
 
   .why-title {
-    font-size: 28px;
+      font-size: 28px;
+  }
+
+  .card {
+      width: 100%;
+      max-width: 90%; /* Ensure cards take up most of the container width */
   }
 }
 
