@@ -1,0 +1,109 @@
+.cta-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  background-color: #FEFAF2;
+  padding: 60px 0;
+}
+
+.left-part{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  padding:0 25px;
+  width:550px;
+  height: 335px;
+}
+
+.left-img{
+  position: absolute;
+  top: -40px;
+  left: 50px;
+}
+
+.product-details{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: auto 25px auto auto;
+}
+
+.product-details p{
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.product-details p span{
+  color: #AAAAAA;
+}
+
+.price{
+  font-size: 42px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.old-price{
+  display: flex;
+  font-size: 19px;
+  font-weight: normal;
+  text-decoration: line-through;
+  color: #B08F6D;
+}
+
+.try-images{
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.try-images img{
+ opacity: 60%;
+}
+
+.cta-title-img{
+  width: 95px;
+}
+
+.right-part{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 420px;
+}
+
+.right-part h2{
+  font-size: 25px;
+  color: #333333;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.right-part h2 span{
+  font-weight: bold;
+}
+
+.right-part p{
+  font-size: 16px;
+  color: #333333;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.buy-button{
+  padding: 10px 48px;
+  color: #FFFFFF;
+  background-color: #23B21F;
+  border: none;
+  border-radius: 27px;
+  font-size: 16px;
+  font-weight: bold;
+}
+

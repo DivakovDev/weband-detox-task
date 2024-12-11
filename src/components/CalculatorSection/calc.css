@@ -1,0 +1,79 @@
+.calculcator-section {
+  position: relative;
+  border-radius: 22px;
+  background-image: url("../public/images/calc-background.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  margin: 120px 280px 200px 140px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.calc-container {
+  position: relative;
+  padding: 53px 230px 53px 91px;
+}
+
+.calc-title {
+  font-size: 25px;
+  color: #362e29;
+  font-weight: normal;
+  margin: 0 0 28px 0;
+}
+
+.calc-title span {
+  font-weight: bold;
+  margin: 0;
+}
+
+.calc-paragraph {
+  font-size: 16px;
+  margin: 0 0 28px 0;
+  width: 625px;
+}
+
+.calc-btn {
+  background-color: #23b21f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 50px;
+  border-radius: 27px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.bmi-man-img {
+  position: absolute;
+  display: flex;
+  top: -35%;
+  right: -16%;
+}
+
+@media (max-width: 1024px) {
+  .calculcator-section{
+    display: flex;
+    margin:140px 100px ;
+  }
+  
+  .calc-container{
+    width: 100%;
+    padding: 50px;
+  }
+  
+  .bmi-man-img {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .calculcator-section{
+    height: 80%;
+    margin:70px 40px ;
+  }
+  
+  .calc-container{
+    padding: 30px;
+  }
+  
+}
