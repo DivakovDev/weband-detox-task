@@ -14,7 +14,8 @@ const WhyToConsume = () => {
       altText: "why to consume leaf icon",
       desc: (
         <>
-          СЪДЪРЖА <span>100%</span> <br/>ЧИСТИ БИЛКИ
+          СЪДЪРЖА <span>100%</span> <br />
+          ЧИСТИ БИЛКИ
         </>
       ),
     },
@@ -23,7 +24,8 @@ const WhyToConsume = () => {
       altText: "why to consume muscle icon",
       desc: (
         <>
-          <span>ЗАСИЛВА</span> И <span>УКРЕПВА</span><br/> ИМУННАТА СИСТЕМА
+          <span>ЗАСИЛВА</span> И <span>УКРЕПВА</span>
+          <br /> ИМУННАТА СИСТЕМА
         </>
       ),
     },
@@ -32,7 +34,8 @@ const WhyToConsume = () => {
       altText: "why to consume vitamins icon",
       desc: (
         <>
-          БОГАТ НА ВАЖНИ<br/>
+          БОГАТ НА ВАЖНИ
+          <br />
           <span>ВИТАМИНИ</span> И <span>МИНЕРАЛИ</span>
         </>
       ),
@@ -40,8 +43,13 @@ const WhyToConsume = () => {
     {
       imgSrc: "../public/icons/why-to-consume-skin-treatment.svg",
       altText: "why to consume vitamins icon",
-      desc: <><span>ХИДРАТИРА</span> И <span>ИЗГЛАЖДА</span><br/>
-          КОЖАТА</>,
+      desc: (
+        <>
+          <span>ХИДРАТИРА</span> И <span>ИЗГЛАЖДА</span>
+          <br />
+          КОЖАТА
+        </>
+      ),
     },
   ];
 

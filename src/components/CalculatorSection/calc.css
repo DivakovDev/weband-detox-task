@@ -52,13 +52,15 @@
 
 @media (max-width: 1024px) {
   .calculcator-section{
-    display: flex;
     margin:140px 100px ;
   }
   
   .calc-container{
-    width: 100%;
     padding: 50px;
+  }
+
+  .calc-paragraph{
+    max-width: -webkit-fill-available;
   }
   
   .bmi-man-img {
@@ -75,5 +77,16 @@
   .calc-container{
     padding: 30px;
   }
+}
+
+@media (max-width: 425px) {
+  .calculcator-section{
+    height: 100%;
+    margin:70px 20px ;
+    max-width: -webkit-fill-available;
+  }
   
+  .calc-container{
+    padding: 30px;
+  }
 }

@@ -36,13 +36,15 @@ const Navbar = () => {
         </li>
         <li>
           <button className="open-menu-btn" onClick={showMenu}>
-            <img src="/images/menu.svg" alt="menu button for opening sidebar" />
+            <img
+              src="../public/images/menu.svg"
+              alt="menu button for opening sidebar"
+            />
           </button>
         </li>
       </ul>
 
       <ul className={`sidebar-li-items ${isMenuOpen ? "open" : ""}`}>
-        
         <li>
           <img
             className="sidebar-svg"
@@ -50,8 +52,11 @@ const Navbar = () => {
             alt="title-logo"
           />
           <button className="close-menu-btn" onClick={showMenu}>
-          <img src="/images/close.svg" alt="close button for closing sidebar" />
-        </button>
+            <img
+              src="../public/images/close.svg"
+              alt="close button for closing sidebar"
+            />
+          </button>
         </li>
         <li>
           <a href="#">За чая</a>
