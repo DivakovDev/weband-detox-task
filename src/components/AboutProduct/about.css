@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   padding: 80px 0;
+  margin: 0 140px;
   gap: 56px;
 }
 
@@ -76,6 +77,7 @@
 @media (max-width: 1200px) {
   .about-section {
     padding: 0;
+    margin: auto;
   }
 
   .image-section {
@@ -99,16 +101,21 @@
 }
 
 @media (max-width: 460px) {
+  .tab {
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+
   .content-section {
-    height: 100%;
-    padding: 40px 10px 80px 10px;
-    align-items: center;
+    padding: 0 10px 80px 10px;
   }
 
   .content {
     height: 20%;
   }
+}
 
+@media (max-width: 425px) {
   .content-title img {
     display: none;
   }
@@ -118,8 +125,11 @@
   }
 
   .tab {
-    padding-top: 20px;
-    margin-bottom: 20px;
     white-space: nowrap;
+  }
+
+  .content-section {
+    height: 100%;
+    padding: 30px 15px 0 15px;
   }
 }
