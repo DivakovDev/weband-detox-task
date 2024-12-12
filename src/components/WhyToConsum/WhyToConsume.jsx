@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { motion, useAnimation } from "motion/react";
 import "./why.css";
 
 const WhyToConsume = () => {
   const [selectedCard, setSelectedCard] = useState(0); // Track the selected card
+  // Create a new animation controller for the section
+  const controls = useAnimation();
+  const sectionRef = useRef(null);
 
   const selectBox = (index) => {
     setSelectedCard(index);
@@ -53,11 +57,38 @@ const WhyToConsume = () => {
     },
   ];
 
+  // Here we are using useEffect to make IntersectionObserver to trigger the animation when the section is in view
+  useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              controls.start({ y: 0, transition: { duration: 1 } });
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+  
+      if (sectionRef.current) {
+        observer.observe(sectionRef.current);
+      }
+  
+      return () => {
+        if (sectionRef.current) {
+          observer.unobserve(sectionRef.current);
+        }
+      };
+    }, [controls]);
+
   return (
-    <div className="why-section">
-      <h2 className="why-title">
+    <div className="why-section" ref={sectionRef}>
+      <motion.h2 className="why-title"
+      initial={{ y: -50 }}
+      animate={controls}
+      >
         Причини да консумираш <span className="why-title-bold">Detox</span>
-      </h2>
+      </motion.h2>
       <div className="card-container">
         {cards.map((card, index) => (
           <div

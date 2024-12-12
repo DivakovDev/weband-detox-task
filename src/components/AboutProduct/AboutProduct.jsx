@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { motion, useAnimation } from "motion/react";
 import "./about.css";
 
 export default function AboutProduct() {
   const [activeTab, setActiveTab] = useState(0);
+  // Create a new animation controller for the sections
+  const controls = useAnimation();
+  const sectionRef = useRef(null);
 
   const handleTabClick = (index) => {
     setActiveTab(index);
@@ -68,12 +72,40 @@ export default function AboutProduct() {
     },
   ];
 
+  // Here we are using useEffect to make IntersectionObserver to trigger the animation when the section is in view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            controls.start({ x: 0, transition: { duration: 2 } });
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [controls]);
+
   return (
-    <div className="about-section">
+    <div className="about-section" ref={sectionRef}>
       <div className="image-section">
-        <img
+        {/* here we use motion for adding animation */}
+        <motion.img
           src="../public/images/about-product-bag.png"
           alt="about product image"
+          // this fields below are for animation
+          initial={{ x: -200 }}
+          animate={controls}
         />
       </div>
       <div className="content-section">
